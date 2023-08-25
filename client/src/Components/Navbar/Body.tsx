@@ -42,7 +42,7 @@ const Body: React.FC<BodyProps> = ({ links, selectedLink, setSelectedLink }) => 
             {links.map((link, index) => {
                 const { title, href } = link;
                 return (
-                    <Link key={`l_${index}`} to={href} className="text-black uppercase">
+                    <Link key={`l_${index}`} to={href} className="text-dark dark:text-primary uppercase">
                         <motion.p
                             className="text-[5vw] pr-[2vw] m-0 flex overflow-hidden pt-[10px] font-[300]"
                             onMouseOver={() => { setSelectedLink({ isActive: true, index }); }}

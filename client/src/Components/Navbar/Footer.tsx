@@ -14,7 +14,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({label}) => {
                     variants={translate} initial="initial" 
                     animate="enter" 
                     exit="exit">
-                    <span>{label}</span>
+                    <span className='text-dark dark:text-primary'>{label}</span>
                 </motion.li>
             </ul>
     )
