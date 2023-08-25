@@ -13,6 +13,7 @@ interface LinkItem {
   title: string;
   href: string;
   src: string;
+  noPicture: string;
 }
 
 const links: LinkItem[] = [
@@ -20,28 +21,34 @@ const links: LinkItem[] = [
     title: "_Index",
     href: "/",
     src: imageIndex.home,
+    noPicture: "Home",
   },
   {
     title: "img",
     href: "/gallery",
     src: imageIndex.gallary,
+    noPicture: "Gallery",
   },
   {
     title: "About Us",
     href: "/about",
     src: imageIndex.about,
+    noPicture: "About US",
   },
   {
     title: "JavaScript",
     href: "/Work",
     src: imageIndex.tours,
+    noPicture: "Work",
   },
   {
     title: "Contact,",
     href: "/contact",
     src: imageIndex.contact,
+    noPicture: "Contact",
   },
 ];
+
 
 const Nav = () => {
   const [selectedLink, setSelectedLink] = useState({
@@ -64,10 +71,14 @@ const Nav = () => {
             selectedLink={selectedLink}
             setSelectedLink={setSelectedLink}
           />
-          <Image
-            src={links[selectedLink.index].src}
-            isActive={selectedLink.isActive}
-          />
+          {links[selectedLink.index].src ? (
+            <Image
+              src={links[selectedLink.index].src}
+              isActive={selectedLink.isActive}
+            />
+          ) : (
+            <div></div>
+          )}
         </div>
         <footer>
           <Footer />
