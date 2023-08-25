@@ -49,6 +49,9 @@ const Body: React.FC<BodyProps> = ({ links, selectedLink, setSelectedLink }) => 
                             onMouseLeave={() => { setSelectedLink({ isActive: false, index }); }}
                             variants={blur}
                             animate={selectedLink.isActive && selectedLink.index !== index ? "open" : "closed"}
+                            style={{
+                                cursor: selectedLink.isActive && selectedLink.index === index ? 'pointer' : 'default'
+                            }}
                         >
                             {getChars(title)}
                         </motion.p>

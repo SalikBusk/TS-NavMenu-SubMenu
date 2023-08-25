@@ -17,13 +17,13 @@ interface LinkItem {
 
 const links: LinkItem[] = [
   {
-    title: "Home",
+    title: "_Index",
     href: "/",
     src: imageIndex.home,
   },
   {
-    title: "Gallary",
-    href: "/shop",
+    title: "img",
+    href: "/gallery",
     src: imageIndex.gallary,
   },
   {
@@ -32,12 +32,12 @@ const links: LinkItem[] = [
     src: imageIndex.about,
   },
   {
-    title: "Tours",
-    href: "/tours",
+    title: "JavaScript",
+    href: "/Work",
     src: imageIndex.tours,
   },
   {
-    title: "Contact",
+    title: "Contact,",
     href: "/contact",
     src: imageIndex.contact,
   },
