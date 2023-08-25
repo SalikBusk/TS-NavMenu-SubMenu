@@ -55,7 +55,6 @@ const Header = () => {
         animate={isActive ? "open" : "closed"}
         className="bg-black opacity-[0.5] h-screen w-full absolute left-0 top-[100%]"
       ></motion.div>
-      {/* Moved AnimatePresence to the end */}
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </div>
   );

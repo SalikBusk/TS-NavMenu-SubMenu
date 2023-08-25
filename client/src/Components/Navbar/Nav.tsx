@@ -50,7 +50,7 @@ const Nav = () => {
 
     return (
         <motion.div variants={height} initial="initial" animate="enter" exit="exit" className='hidden'>
-            <div className='flex flex-row gap-[50px] justify-between'>
+            <div className='flex flex-row gap-[50px] justify-between mt-[20px]' >
                 <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink} />
                 <Image src={links[selectedLink.index].src} isActive={selectedLink.isActive}/>
             </div>
